@@ -1,6 +1,11 @@
 # site-location-vehicule
 Site de location de véhicules en ligne
 
+## Membre du groupe
+- APEDJINOU
+- DONYO
+- MAMADOU
+- TOGBA
 
 ## Objectif
 Nous souhaitons nous doter d'un site de location de véhicules en ligne.
