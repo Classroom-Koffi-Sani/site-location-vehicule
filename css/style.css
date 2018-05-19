@@ -1,0 +1,41 @@
+.header{padding: 10px 0;}
+.rmUnderline a:hover, .rmUnderline a:focus, .rmUnderline a:active{text-decoration: none;}
+.middleBar{height: 50px; line-height:50px;background-color: #365b7a;padding: 0 100px; color: #fff;font-weight: bold;font-size: 13px;}
+.slogan{font-weight: normal;font-size: 14px;}
+.reservationForm .reservationFormHeader{background-color: #119a3b;color: #fff;padding: 10px; border-radius: 4px 4px 0 0;}
+.reservationForm .reservationFormBody{border: 1px solid #119a3b; border-top: none;padding: 25px; color: #108333; background-color: #fff; border-radius: 0 0 4px 4px;}
+.reservationForm .reservationFormBody form input{border: 1px solid #aaa; border-radius: 2px; width: 30%; padding: 3px 2px 3px 7px;}
+.voitureDesc{color: #555;text-align: center;margin: 15px 0;}
+.celSearch{min-width: 50%;}
+.contact_a_propos{width: 500px;}
+#bodyBottom,.btn-info.btn-lg.deplierBtn{display: none;}
+.deplierBtn,.discoverBtn{width: 200px;}
+.slideLeft{border-right: 1px solid #4c77be; height: 640px;background-color: #ddd; color: #d7e4f9;}
+.container-slideLeft{width: 100%;overflow: hidden;}
+.slideLeftItems{height: 40px; border-bottom: 1px solid #bbb; line-height: 40px; padding: 0 15px;}
+.dashboard{height: 40px;text-align: center;line-height: 40px; background-color: #4c77be;}
+.dashboardBody{height: 640px;}
+.coverAdminArea{height: 100%; overflow: hidden;}
+.containerPers{padding: 0 75px; margin: 0 5px;}
+.retrouvez{width: 70%; font-family: Century Gothic; line-height: 25px; color: #777;}
+
+
+@media(max-width: 1200px) {
+	.surPlus{display: none;}
+	.containerPers{padding: 5px;}
+	.containerPers .row .col-xs-12{padding: 0 5px;}
+}
+
+@media(max-width: 768px) {
+	.retrouvez{width: 97.5%;}
+	.principalBanner{margin-top: 20px;}
+	.voitureDesc{box-shadow: 0 0 15px rgba(0,0,0,0.2);margin-bottom: 20px; background-color: rgba(0,0,0,0.2); margin-top: -115px;position: relative; border-radius: 0 0 5px 5px; height: 115px;color: #fff;}
+	.reservationForm .reservationFormBody form input{width: 32%;}
+	.reservationForm{margin: 0 5px;}
+	.containerPers{padding: 0;}
+	.containerPers .row .col-xs-12{padding: 0 5px;}
+	/*.header{display: none;}*/
+	.middleBar{padding: 0 10px;}
+	.celSearch{width: 100%;}
+	.home,.contact_a_propos{display: none;}
+}
