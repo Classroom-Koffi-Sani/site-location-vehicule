@@ -34,6 +34,7 @@
 .menuMinWidth div:hover,.menuMinWidth div:focus,.menuMinWidth div:active{background-color: #b6dced; transition-duration: 0.3s;}
 .tableAjoutVehicule tr td{padding: 10px;}
 .tableAjoutVehicule tr td label{color: #777; font-weight: normal; font-size: 13px;}
+.voitureDescAdmin{background-color: rgba(0,0,0,0.4); margin-top: -65px;position: relative; color: #fff; border-radius: 0 0 5px 5px;padding: 5px;}
 
 
 
