@@ -18,4 +18,9 @@ $(document).ready(function() {
 		$('.header').slideDown(1200);
 		$('.middleBar').slideDown(1200);
 	});
+
+
+	$('.menuToggle').on("click", function() {
+		$('.menuMinWidth').slideToggle();
+	});
 });
