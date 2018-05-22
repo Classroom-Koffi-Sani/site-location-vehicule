@@ -15,6 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
 
 </head>
+<style type="text/css">
+	body{overflow-y: hidden;}
+</style>
 <body id="page">
 
 	<?php
@@ -26,6 +29,7 @@
 	<script type="text/javascript" src="../js/jquery compressed-3.2.1.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript" src="../js/scriptAjaxReg.js"></script>
 
 </body>
 </html>
