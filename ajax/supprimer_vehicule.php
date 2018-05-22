@@ -1,0 +1,1 @@
+<h1>Supprimer un véhicule</h1>
