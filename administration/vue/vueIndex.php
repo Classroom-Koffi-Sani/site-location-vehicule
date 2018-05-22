@@ -2,14 +2,19 @@
 	<div class="middleBar rmUnderline">
 		<table width="100%">
 			<tr>
-				<td width="200">
-					<i class="fa fa-car fa-2x"> </i>
-					CarsLocation
+				<td width="300">
+					<i class="fa fa-cogs fa-2x"> </i>
+					<i class="fa fa-wrench fa-2x"> </i>
+					CarsLocation Administration
 				</td>
 				<td align="right" class="slogan">
 					<a href="#" style="color: #fff;">
-						<i class="fa fa-question-circle"> </i>
-						Obtenir de l'aide
+						<i class="fa fa-user"> </i>
+						Lazare
+					</a> |
+					<a href="#" style="color: #fff;">
+						<i class="glyphicon glyphicon-log-out"> </i>
+						Se déconnecter
 					</a>
 				</td>
 			</tr>
@@ -24,39 +29,48 @@
 						<b>Tableau de bord</b>
 					</div>
 					<a href="#">
-						<div class="slideLeftItems">
+						<div class="slideLeftItems" id="ajouter_vehicule">
+							<i class="fa fa-plus"> </i>
 							Ajouter un véhicule
 							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
 						</div>
 					</a>
 					<a href="#">
-						<div class="slideLeftItems">
+						<div class="slideLeftItems" id="modifier_vehicule">
+							<i class="fa fa-pencil"> </i>
 							Modifer un véhicule
 							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
 						</div>
 					</a>
 					<a href="#">
-						<div class="slideLeftItems">
+						<div class="slideLeftItems" id="afficher_vehicule">
 							<i class="fa fa-eye"> </i>
-							Afiicher les véhicules
+							Afficher les véhicules
 							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
 						</div>
 					</a>
 					<a href="#">
-						<div class="slideLeftItems">
+						<div class="slideLeftItems" id="supprimer_vehicule">
 							<i class="fa fa-trash"> </i>
 							Supprimer un véhicule
+							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
+						</div>
+					</a>
+					<a href="#">
+						<div class="slideLeftItems" id="administrateurs">
+							<i class="fa fa-group"> </i>
+							Gestions d'administrateurs
 							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
 						</div>
 					</a>
 				</div>
 			</div>
 			<div class="col-xs-9">
-				<div class="dashboardBody"><br /><br /><br />
+				<div class="dashboardBody" id="bodyAdminArea"><br /><br /><br /><br />
 					<center>
 						<h1 style="color: #aaa;">
-							<i class="fa fa-wrench fa-4x"> </i>
-							<i class="fa fa-cog fa-4x"> </i><br /><br />
+							<i class="fa fa-cogs fa-4x"> </i>
+							<i class="fa fa-wrench fa-4x"> </i><br /><br />
 							Espace de configuration administrateur
 						</h1>
 					</center>
