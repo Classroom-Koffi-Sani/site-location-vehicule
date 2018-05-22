@@ -1,41 +1,70 @@
-.header{padding: 10px 0;}
+.container.header{padding: 10px 75px;}
 .rmUnderline a:hover, .rmUnderline a:focus, .rmUnderline a:active{text-decoration: none;}
-.middleBar{height: 50px; line-height:50px;background-color: #2f799b;padding: 0 100px; color: #fff;font-weight: bold;font-size: 13px;}
+.middleBar{height: 50px;line-height:50px;background-color: #2f799b;padding: 0 100px; color: #fff;font-weight: bold;font-size: 13px;}
+.middleBar ul li{display: inline-block;list-style-type: none;}
+.middleBar .menuToggle{display:none;cursor: pointer; width: 30px; height: 30px; position: relative; float: right;margin-top: 12px;}
+.middleBar .menuToggle span{height: 3px;background-color: #fff;width: 100%; position: absolute;top: 12px;}
+.middleBar .menuToggle span:before{content: '';height: 3px;background-color: #fff;width: 100%; position: absolute; top: -8px;left: 0;}
+.middleBar .menuToggle span:after{content: '';height: 3px;background-color: #fff;width: 100%; position: absolute; top: 8px;left: 0;}
 .slogan{font-weight: normal;font-size: 14px;}
 .reservationForm form input{border: 1px solid #ccc; border-radius: 2px; width: 30%; padding: 3px 2px 3px 7px;}
 .voitureDesc{color: #555;text-align: center;margin: 15px 0;}
-.celSearch{min-width: 50%;}
+.celSearch{min-width: 40%;}
 .contact_a_propos{width: 500px;}
 #bodyBottom,.btn-info.btn-lg.deplierBtn{display: none;}
 .deplierBtn,.discoverBtn{width: 200px;}
-.slideLeft{border-right: 1px solid #4c77be; height: 640px;background-color: #ddd; color: #d7e4f9;}
+.slideLeft{border-right: 1px solid #68aaf5; height: 640px;background-color: #ddd; color: #fff;}
 .container-slideLeft{width: 100%;overflow: hidden;}
-.slideLeftItems{height: 40px; border-bottom: 1px solid #bbb; line-height: 40px; padding: 0 15px;}
-.dashboard{height: 40px;text-align: center;line-height: 40px; background-color: #4c77be;}
+.slideLeftItems{height: 40px; border-bottom: 1px solid #ccc; line-height: 40px; padding: 0 15px;}
+.slideLeftItems:hover, .slideLeftItems:focus, .slideLeftItems:active{background-color: #eee;}
+.dashboard{height: 40px;text-align: center;line-height: 40px; background-color: #68aaf5;}
 .dashboardBody{height: 640px;}
 .coverAdminArea{height: 100%; overflow: hidden;}
-.containerPers{padding: 0 75px; margin: 0 5px;}
 .retrouvez{width: 70%; font-family: Century Gothic; line-height: 25px; color: #777;}
-.reservationForm{margin: 0 15px;}
 .plusOptionVoiture{font-size: 18px;text-align: center;}
+#bodyTop{margin-top: 30px;}
+.smallWindowsRight .title{color: #f74c2f; font-size: 24px; font-family: Century Gothic;}
+.smallWindowsRight .contents{font-size: 18px; color: #777;}
+.middleBar table tr td .menuToggle span{position: absolute; height: 4px;background-color: #fff; width: 35px;}
+.help{color: #cee9f6;}
+.help:hover,.help:focus,.help:active{color: #fff;}
+.middleBar ul{margin-left: -40px;}
+.menuMinWidth{background-color: #a4c7d7; display: none;}
+.menuMinWidth div{padding: 7px 15px;border-bottom: 1px solid #78b1cb; font-size: 15px;}
+.menuMinWidth div:hover,.menuMinWidth div:focus,.menuMinWidth div:active{background-color: #b6dced; transition-duration: 0.3s;}
+.tableAjoutVehicule tr td{padding: 10px;}
+.tableAjoutVehicule tr td label{color: #777; font-weight: normal; font-size: 13px;}
+
 
 
 @media(max-width: 1200px) {
 	.surPlus{display: none;}
-	.containerPers{padding: 15px;}
-	.containerPers .row .col-xs-12{padding: 0 15px;}
+	.container{padding: 20px;}
+	.container.header{padding: 15px;}
+	.container, .container.header,.middleBar{min-width: auto;}
+	.smallWindowsRight .title{font-size: 18px;}
+	.smallWindowsRight .contents{font-size: 15px;}
+
 }
 
 @media(max-width: 768px) {
-	.retrouvez{width: 97.5%;}
-	.principalBanner{margin-top: 20px;}
+	.help{display: none;}
+	.middleBar .menuToggle{display: block;}
+	body{overflow-x: hidden;}
+	#bodyTop{margin-top: 0px;}
+	.smallWindowsRight{border-bottom: 3px solid #df0a14;padding-bottom: 5px;}
+	.container,.container.header,.middleBar{min-width: 280px;}
+	.smallWindowsRight .title{font-size: 16px;}
+	.smallWindowsRight .contents{font-size: 13px;}
+	.principalBanner{padding: 0 10px;}
 	.voitureDesc{box-shadow: 0 0 15px rgba(0,0,0,0.2);margin-bottom: 20px; background-color: rgba(0,0,0,0.2); margin-top: -115px;position: relative; border-radius: 0 0 5px 5px; height: 115px;color: #fff;}
 	.reservationForm form input{width: 32%;}
-	.reservationForm{margin: 0 5px;}
-	.containerPers{padding: 20px;}
-	.containerPers .row .col-xs-12{padding: 0 5px;}
-	/*.header{display: none;}*/
+	.reservationForm {margin: 0 15px;}
+	.container .row .col-xs-12{padding: 0 5px;}
+	.container.header{padding: 15px 10px 15px 5px;}
 	.middleBar{padding: 0 10px;}
-	.celSearch{width: 100%;}
-	.home,.contact_a_propos{display: none;}
+	.home,.contact_a_propos,.contact_a_propos0{display: none;}
+}
+@media(max-width: 400px){
+	.container.header{padding: 15px 20px 10px 5px;}
 }
