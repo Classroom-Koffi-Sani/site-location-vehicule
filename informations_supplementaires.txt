@@ -1,0 +1,3 @@
+Nom de la base de donées : location_vehicule
+Nom d'utilisateur adminsitrateur : admin
+Mot de passe adminstrateur : admin
