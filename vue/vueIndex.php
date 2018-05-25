@@ -75,166 +75,57 @@
 							</center>
 						</div>
 						<div class="panel-body">
-							<form>
+							
 								<label>Date début</label> : La date du début de location<br />
-								<input type="number" name="jourDebut" max="31" min="1" placeholder="1" />
-								<input type="number" name="moisDebut" max="12" min="1" placeholder="1" />
-								<input type="number" name="anneeDebut" max="2019" min="2018" placeholder="2018" />
+								<input type="number" id="jourD" name="jourDebut" max="31" min="1" placeholder="1" />
+								<input type="number" id="moisD" name="moisDebut" max="12" min="1" placeholder="1" />
+								<input type="number" id="anneeD" name="anneeDebut" max="2019" min="2018" placeholder="2018" />
 								<div style="height: 10px;"></div>
 								<label>Date fin</label> : La date de fin de location<br />
-								<input type="number" name="jourFin" max="31" min="1" placeholder="1" />
-								<input type="number" name="moisFin" max="12" min="1" placeholder="1" />
-								<input type="number" name="anneeFin" max="2019" min="2018" placeholder="2018" /><br />
+								<input type="number" id="jourA" name="jourFin" max="31" min="1" placeholder="1" />
+								<input type="number" id="moisA" name="moisFin" max="12" min="1" placeholder="1" />
+								<input type="number" id="anneeA" name="anneeFin" max="2019" min="2018" placeholder="2018" /><br />
 								<div style="height: 10px;"></div>
-								<button class="btn btn-danger btn-sm">
+								<button class="btn btn-danger btn-sm" id="submit_date_reservation">
 									<i class="fa fa-calendar"> </i>
 									<b>Soumettre la date</b>
 									<i class="fa fa-chevron-right"> </i>
 								</button>
 
-							</form>
+							
 						</div>
 					</div>
 				</div>
 
 			</div>
 			<div class="row">
+			<center><?php echo($check==0) ? '<br /><br /><h1><i class=\'fa fa-times\'> </i> Aucun Enregitrement !</h1>' : ''; ?></center>
 				<div class="col-xs-12"><br />
 					<div class="principalBanner">
-						<div class="col-xs-12 col-sm-4 col-lg-4">
-							<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-							<br />
-							<div class="voitureDesc">
-								<center><b>Volvo 145</b></center>
-								Nombre de chaises : 5 chaises<br />
-								Source d'énergir : Gaz-oil
-								<div style="height: 10px;"></div>
-								<center>
-									<a href="#" class="btn btn-info btn-sm">
-										<i class="glyphicon glyphicon-eye-open"> </i>
-										<b>Afficher</b>
-									</a>
-									<a href="#" class="btn btn-warning btn-sm">
-										<i class="fa fa-share"> </i>
-										<b>Réserver</b>
-									</a>
-								</center>
+						<?php while($data=$req->fetch()) { ?>
+							<div class="col-xs-12 col-sm-4 col-lg-4">
+								<div class="img-V">
+									<img class="img-rounded" src="images_voitures/<?php echo($data['image']); ?>" width="100%" />
+								</div>
+								<br />
+								<div class="voitureDesc">
+									<center><b><?php echo($data['marque']." ".$data['modele']); ?></b></center>
+									Nombre de chaises : 5<?php echo($data['chaises']); ?> chaises<br />
+									Source d'énergie : <?php echo($data['couleur']); ?>
+									<div style="height: 10px;"></div>
+									<center>
+										<a href="afficher/?id=<?php echo($data['id']); ?>" class="btn btn-info btn-sm">
+											<i class="glyphicon glyphicon-eye-open"> </i>
+											<b>Afficher</b>
+										</a>
+										<a href="date_reservation/?id=<?php echo($data['id']); ?>" class="btn btn-warning btn-sm">
+											<i class="fa fa-share"> </i>
+											<b>Réserver</b>
+										</a>
+									</center>
+								</div>
 							</div>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4">
-							<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-
-							<br />
-							<div class="voitureDesc">
-								<center><b>Volvo 145</b></center>
-								Nombre de chaises : 5 chaises<br />
-								Source d'énergir : Gaz-oil
-								<div style="height: 10px;"></div>
-								<center>
-									<a href="#" class="btn btn-info btn-sm">
-										<i class="glyphicon glyphicon-eye-open"> </i>
-										<b>Afficher</b>
-									</a>
-									<a href="#" class="btn btn-warning btn-sm">
-										<i class="fa fa-share"> </i>
-										<b>Réserver</b>
-									</a>
-								</center>
-							</div>
-
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4">
-							<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-
-							<br />
-							<div class="voitureDesc">
-								<center><b>Volvo 145</b></center>
-								Nombre de chaises : 5 chaises<br />
-								Source d'énergir : Gaz-oil
-								<div style="height: 10px;"></div>
-								<center>
-									<a href="#" class="btn btn-info btn-sm">
-										<i class="glyphicon glyphicon-eye-open"> </i>
-										<b>Afficher</b>
-									</a>
-									<a href="#" class="btn btn-warning btn-sm">
-										<i class="fa fa-share"> </i>
-										<b>Réserver</b>
-									</a>
-								</center>
-							</div>
-
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-lg-4">
-							<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-
-							<br />
-							<div class="voitureDesc">
-								<center><b>Volvo 145</b></center>
-								Nombre de chaises : 5 chaises<br />
-								Source d'énergir : Gaz-oil
-								<div style="height: 10px;"></div>
-								<center>
-									<a href="#" class="btn btn-info btn-sm">
-										<i class="glyphicon glyphicon-eye-open"> </i>
-										<b>Afficher</b>
-									</a>
-									<a href="#" class="btn btn-warning btn-sm">
-										<i class="fa fa-share"> </i>
-										<b>Réserver</b>
-									</a>
-								</center>
-							</div>
-
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-lg-4">
-							<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-
-							<br />
-							<div class="voitureDesc">
-								<center><b>Volvo 145</b></center>
-								Nombre de chaises : 5 chaises<br />
-								Source d'énergir : Gaz-oil
-								<div style="height: 10px;"></div>
-								<center>
-									<a href="#" class="btn btn-info btn-sm">
-										<i class="glyphicon glyphicon-eye-open"> </i>
-										<b>Afficher</b>
-									</a>
-									<a href="#" class="btn btn-warning btn-sm">
-										<i class="fa fa-share"> </i>
-										<b>Réserver</b>
-									</a>
-								</center>
-							</div>
-
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-lg-4">
-							<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-
-							<br />
-							<div class="voitureDesc">
-								<center><b>Volvo 145</b></center>
-								Nombre de chaises : 5 chaises<br />
-								Source d'énergir : Gaz-oil
-								<div style="height: 10px;"></div>
-								<center>
-									<a href="#" class="btn btn-info btn-sm">
-										<i class="glyphicon glyphicon-eye-open"> </i>
-										<b>Afficher</b>
-									</a>
-									<a href="#" class="btn btn-warning btn-sm">
-										<i class="fa fa-share"> </i>
-										<b>Réserver</b>
-									</a>
-								</center>
-							</div>
-
-						</div>
-
+						<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -248,6 +139,8 @@
 		</div>
 	</div>
 </div>
+
+<?php if($check!=0) { ?>
 
 <div class="plusOptionVoiture">
 	Pour plus de choix de véhicules ...
@@ -265,315 +158,44 @@
 		<i class="fa fa-chevron-up"> </i>
 	</div>
 </center>
+<?php } ?>
 <br />
+
+<?php
+	$query0="SELECT * FROM vehicules LIMIT 0,18";
+	$req0=$bdd->prepare($query0);
+	$req0->execute();
+?>
 
 
 <div class="container" id="bodyBottom">
 	
 	<div class="row">
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-4 col-lg-4">
-			<img class="img-rounded" src="images/19190708_1559814290708870_841662609_n.jpg" width="100%" />
-			<br />
-			<div class="voitureDesc">
-				<center><b>Volvo 145</b></center>
-				Nombre de chaises : 5 chaises<br />
-				Source d'énergir : Gaz-oil
-				<div style="height: 10px;"></div>
-				<center>
-					<a href="#" class="btn btn-info btn-sm">
-						<i class="glyphicon glyphicon-eye-open"> </i>
-						<b>Afficher</b>
-					</a>
-					<a href="#" class="btn btn-warning btn-sm">
-						<i class="fa fa-share"> </i>
-						<b>Réserver</b>
-					</a>
-				</center>
-			</div>
-		</div>
-
+		<?php while($data0=$req0->fetch()) { ?>
+							<div class="col-xs-12 col-sm-4 col-lg-4">
+								<div class="img-V">
+									<img class="img-rounded" src="images_voitures/<?php echo($data0['image']); ?>" width="100%" />
+								</div>
+								<br />
+								<div class="voitureDesc">
+									<center><b><?php echo($data0['marque']." ".$data0['modele']); ?></b></center>
+									Nombre de chaises : 5<?php echo($data0['chaises']); ?> chaises<br />
+									Source d'énergie : <?php echo($data0['couleur']); ?>
+									<div style="height: 10px;"></div>
+									<center>
+										<a href="afficher/?id=<?php echo($data0['id']); ?>" class="btn btn-info btn-sm">
+											<i class="glyphicon glyphicon-eye-open"> </i>
+											<b>Afficher</b>
+										</a>
+										<a href="../date_reservation/?id=<?php echo($id); ?>" class="btn btn-warning btn-sm">
+											<i class="fa fa-share"> </i>
+											<b>Réserver</b>
+										</a>
+									</center>
+								</div>
+							</div>
+						<?php } ?>
+		
 		<center>
 			<a href="#" class="btn btn-primary">
 				<i class="fa fa-plus-circle"> </i>
