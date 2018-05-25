@@ -1,3 +1,10 @@
+<?php
+	include 'includes/connection.php';
+	$query="SELECT * FROM vehicules LIMIT 0,6";
+	$req=$bdd->prepare($query);
+	$req->execute();
+	$check=$req->rowCount($query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +26,9 @@
 		require 'vue/vueIndex.php';
 	?>
 
-
-
+	<br />
+	<?php include 'includes/footer.php'; ?>
+	<br />
 	<script type="text/javascript" src="js/jquery compressed-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
