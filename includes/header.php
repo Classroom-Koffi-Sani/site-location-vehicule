@@ -5,15 +5,15 @@
 				<tr>
 					<td width="10%" class="home">
 						<div>
-							<a href="/dashboard/location_voitures/site-location-vehicule/">
+							<a href="/site-location-vehicule/">
 								<i class="fa fa-home fa-2x"> </i>
 							</a>
 						</div>
 					</td>
 					<td class="celSearch">
-						<form id="search" method="post" action="/dashboard/location_voitures/site-location-vehicule/resultats_recherche/">
+						<form id="search" method="post" action="/site-location-vehicule/resultats_recherche/">
 							<div class="input-group">
-								<input type="text" name="motCle" id="motCle" class="form-control" placeholder="Rechercher un véhicule ..." />
+								<input type="text" name="motCle" id="motCle" class="form-control" placeholder="Rechercher (marque, modèle, serie ou matricule)" />
 								<span class="input-group-btn">
 									<button type="submit" class="btn btn-danger" style="width: 60px;">
 										<span class="glyphicon glyphicon-search"></span>
@@ -34,6 +34,9 @@
 						</a> |
 						<a href="#">
 							<i class="fa fa-bookmark"> </i> Mentions légales
+						</a> |
+						<a href="/site-location-vehicule/authentification_admin/">
+							<i class="fa fa-user"> </i><i class="fa fa-cogs"> </i> Administration
 						</a>
 					</td>
 					<td width="2.5%"></td>
@@ -92,6 +95,11 @@
 		<div>
 			<i class="fa fa-question"> </i>
 			Obtenir de l'aide
+		</div>
+	</a>
+	<a href="/site-location-vehicule/authentification_admin/">
+		<div>
+			<i class="fa fa-user"> </i><i class="fa fa-cogs"> </i> Administration
 		</div>
 	</a>
 </div>
