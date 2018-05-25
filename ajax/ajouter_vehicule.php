@@ -1,13 +1,37 @@
+<?php
+	
+	include '../includes/connection.php';
+
+	$vide="";
+
+	$suppr=$bdd->prepare("DELETE FROM vehicules WHERE image = ?");
+	$suppr->execute(array($vide));
+	$suppr->closeCursor();
+	
+?>
+
+<div class="successAddMessage">
+	<i class="fa fa-check"> </i>
+	Données stockées !
+</div>
+
+<div class="failAddMessage">
+	<i class="fa fa-times"> </i>
+	Remplir tous les champs !
+</div>
+
 <center>
 	<h3><i class="fa fa-plus"> </i> Ajouter un véhicule</h3>
 	<div style="border: 1px solid #aaa; margin-right: 40px;"></div>
 </center>
 
+<div class="coverTableAjoutVehicule">
+
 <h4 style="color: #e10a14;">
 	<i class="fa fa-bar-chart-o"> </i>
-	Rensignez les performances du véhicule
+	Renseignez les performances du véhicule
 </h4>
-<form>
+
 <table width="95%" class="tableAjoutVehicule">
 	<tr>
 		<td>
@@ -29,7 +53,7 @@
 	</tr>
 	<tr>
 		<td>
-			<label for="couleur">Couleur</label><br />
+			<label for="couleur">Source d'énergie</label><br />
 			<input class="form-control" type="text" name="couleur" id="couleur" />
 		</td>
 		<td>
@@ -49,7 +73,7 @@
 	<tr>
 		<td>
 			<label for="Vmax">Vitesse maximale</label><br />
-			<input class="form-control" type="text" name="couleur" id="couleur" placeholder="220 km/h" />
+			<input class="form-control" type="text" name="Vmax" id="Vmax" placeholder="220 km/h" />
 		</td>
 		<td>
 			<label for="contenance">Transmission</label><br />
@@ -69,20 +93,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td style="padding-left: 10px;">
-			<label style="color: #fff; width: 100%;" for="file" class="btn btn-warning btn-sm">
-				<i class="fa fa-image"> </i>
-				<b>Ajouter une image du véhicule</b>
-			</label>
-			<input class="hide" type="file" name="file" id="file">
-		</td>
-	</tr>
-	<tr>
 		<td>
-			<button type="submit" class="btn btn-primary btn-sm">
+			<button type="submit" class="btn btn-primary" id="addVehicle" style="width: 100%;">
 				<i class="fa fa-plus"> </i>
 				<b>Ajouter le véhicule</b>
 			</button>
@@ -92,7 +104,5 @@
 		<td></td>
 	</tr>
 </table>
-
-			
-
-</form>
+</div>
+<script type="text/javascript" src="../js/addVehicle.js"></script>
