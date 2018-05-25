@@ -1,3 +1,9 @@
+<?php
+	include '../includes/connection.php';
+	if (!isset($_SESSION['pseudo'])) {
+		header('Location: ../');
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +36,7 @@
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 	<script type="text/javascript" src="../js/scriptAjaxReg.js"></script>
+	
 
 </body>
 </html>
