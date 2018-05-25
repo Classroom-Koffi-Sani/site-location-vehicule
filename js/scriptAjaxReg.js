@@ -33,4 +33,28 @@ $(document).ready(function() {
 			$('#bodyAdminArea').html(data);
 		});
 	});
+
+
+	$('#submit_date_reservation2').click(function() {
+
+		var id = $('#id').val();
+		var jourD = $('#jourD').val();
+		var moisD = $('#moisD').val();
+		var anneeD = $('#anneeD').val();
+		var jourA = $('#jourA').val();
+		var moisA = $('#moisA').val();
+		var anneeA = $('#anneeA').val();
+
+		if (jourA!=""&&moisA!=""&&anneeA!=""&&anneeD!=""&&moisD!=""&&jourD!="") {
+			$.post('../ajax/reservation2.php', {jourD:jourD,moisD:moisD,anneeD:anneeD,jourA:jourA,moisA:moisA,anneeA:anneeA,id:id}, function(data) {
+				$('.reservation_date_request').html("<br /><br /><br /><center><img src='images/ajax-loader (3).gif' /></center><br /><br />");
+				$('.reservation_date_request').html(data);	
+			});
+		} else {
+			alert('Remplir tous les champs !');
+		}
+
+	});
+
+
 });
