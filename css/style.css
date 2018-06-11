@@ -1,0 +1,80 @@
+.container.header{padding: 10px 75px;}
+.rmUnderline a:hover, .rmUnderline a:focus, .rmUnderline a:active{text-decoration: none;}
+.middleBar{height: 50px;line-height:50px;background-color: #2f799b;padding: 0 100px; color: #fff;font-weight: bold;font-size: 13px;}
+.middleBar ul li{display: inline-block;list-style-type: none;}
+.middleBar .menuToggle{display:none;cursor: pointer; width: 30px; height: 30px; position: relative; float: right;margin-top: 12px;}
+.middleBar .menuToggle span{height: 3px;background-color: #fff;width: 100%; position: absolute;top: 12px;}
+.middleBar .menuToggle span:before{content: '';height: 3px;background-color: #fff;width: 100%; position: absolute; top: -8px;left: 0;}
+.middleBar .menuToggle span:after{content: '';height: 3px;background-color: #fff;width: 100%; position: absolute; top: 8px;left: 0;}
+.slogan{font-weight: normal;font-size: 14px;}
+.reservationForm input{border: 1px solid #ccc; border-radius: 2px; width: 30%; padding: 3px 2px 3px 7px;}
+.voitureDesc{color: #555;text-align: center;margin: -10px 0 20px 0;}
+.celSearch{min-width: 40%;}
+.contact_a_propos{width: 500px;}
+#bodyBottom,.btn-info.btn-lg.deplierBtn{display: none;}
+.deplierBtn,.discoverBtn{width: 200px;}
+.slideLeft{border-right: 1px solid #68aaf5; height: 650px;background-color: #ddd; color: #fff;}
+.container-slideLeft{width: 100%;overflow: hidden;}
+.slideLeftItems{height: 40px; border-bottom: 1px solid #ccc; line-height: 40px; padding: 0 15px; cursor: pointer;color: #777;}
+.slideLeftItems:hover, .slideLeftItems:focus, .slideLeftItems:active{background-color: #eee;}
+.dashboard{height: 40px;text-align: center;line-height: 40px; background-color: #68aaf5;}
+.dashboardBody{height: 640px;}
+.coverAdminArea{height: 100%; overflow: hidden;}
+.retrouvez{width: 70%; font-family: Century Gothic; line-height: 25px; color: #777;}
+.plusOptionVoiture{font-size: 18px;text-align: center;}
+#bodyTop{margin-top: 30px;}
+.smallWindowsRight .title{color: #f74c2f; font-size: 24px; font-family: Century Gothic;}
+.smallWindowsRight .contents{font-size: 18px; color: #777;}
+.middleBar table tr td .menuToggle span{position: absolute; height: 4px;background-color: #fff; width: 35px;}
+.help{color: #cee9f6;}
+.help:hover,.help:focus,.help:active{color: #fff;}
+.middleBar ul{margin-left: -40px;}
+.menuMinWidth{background-color: #a4c7d7; display: none;}
+.menuMinWidth div{padding: 7px 15px;border-bottom: 1px solid #78b1cb; font-size: 15px;}
+.menuMinWidth div:hover,.menuMinWidth div:focus,.menuMinWidth div:active{background-color: #b6dced; transition-duration: 0.3s;}
+.tableAjoutVehicule tr td{padding: 10px;}
+.tableAjoutVehicule tr td label{color: #777; font-weight: normal; font-size: 13px;}
+.voitureDescAdmin{background-color: rgba(0,0,0,0.4); margin-top: -80px;position: relative; color: #fff; border-radius: 0 0 5px 5px;padding: 5px; font-size: 12px;}
+.successAddMessage{display: none; border-radius: 5px; background-color: #51b953; padding: 15px; position: absolute;top: 5px; right: 55px; color: #fff;}
+.failAddMessage{display: none; border-radius: 5px; background-color: #e10a14; padding: 15px; position: absolute;top: 5px; right: 55px; color: #fff;}
+.input_Update{border: none; outline: none;padding: 3px; width: 100%;}
+.sessionForm{margin: 0 37.5%; border: 1px solid #ccc; border-radius: 5px; padding: 15px 40px 50px 40px;}
+.img-V{height:150px; overflow: hidden; border-radius: 5px;}
+.afficher{margin: 0 20%;}
+
+@media(max-width: 1200px) {
+	.afficher{margin: 0 10%;}
+	.img-V{height:100px;}
+	.surPlus{display: none;}
+	.container{padding: 20px;}
+	.container.header{padding: 15px;}
+	.container, .container.header,.middleBar{min-width: auto;}
+	.smallWindowsRight .title{font-size: 18px;}
+	.smallWindowsRight .contents{font-size: 15px;}
+	.sessionForm{margin: 0 20%;}
+}
+
+@media(max-width: 768px) {
+	.afficher{margin: 0 3%;}
+	.img-V{height:130px;}
+	.sessionForm{margin: 0 5%;}
+	.help{display: none;}
+	.middleBar .menuToggle{display: block;}
+	body{overflow-x: hidden;}
+	#bodyTop{margin-top: 0px;}
+	.smallWindowsRight{border-bottom: 3px solid #df0a14;padding-bottom: 5px;}
+	.container,.container.header,.middleBar{min-width: 280px;}
+	.smallWindowsRight .title{font-size: 16px;}
+	.smallWindowsRight .contents{font-size: 13px;}
+	.principalBanner{padding: 0 10px;}
+	.voitureDesc{box-shadow: 0 0 15px rgba(0,0,0,0.2);margin-bottom: 20px; background-color: rgba(0,0,0,0.2); margin-top: -135px;position: relative; border-radius: 0 0 5px 5px; height: 115px;color: #fff;}
+	.reservationForm form input{width: 32%;}
+	.reservationForm {margin: 0 15px;}
+	.container .row .col-xs-12{padding: 0 5px;}
+	.container.header{padding: 15px 10px 15px 5px;}
+	.middleBar{padding: 0 10px;}
+	.home,.contact_a_propos,.contact_a_propos0{display: none;}
+}
+@media(max-width: 400px){
+	.container.header{padding: 15px 20px 10px 5px;}
+}
